@@ -1,11 +1,11 @@
 # Site settings
-title: Hux Blog
-SEOTitle: 黄玄的博客 | Hux Blog
+title: Leppard Blog
+SEOTitle: 李贞良的博客 | Leppard Blog
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
-description: "关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
-keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
-url: "https://huangxuan.me"              # your host, for absolute URL
+email: rangooo.lizl@gmail.com
+description: "About me"
+keyword: "Leppard, Leppard Blog, 李贞良的博客, lizhenliang, 李贞良, iOS, Apple, Swift"
+url: "https://rangooo.me"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,11 +13,10 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
-#facebook_username:  huxpro
+weibo_username:   Lililililizl
+github_username:  Leppard
+# twitter_username: 
+#facebook_username:  
 #linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -58,28 +57,37 @@ kramdown:
 
 
 
-# Disqus settings
-disqus_username: hux
 
-# Netease settings
-netease_comment: false
+# Disqus settings
+# disqus_username: hux
+
+
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: c152711aec32715b487b                            #生成的clientID
+  clientSecret: 8146b0a4bd7af930ee8f57ca37250bc62e3b610e    #生成的clientSecret
+  repo: Leppard.github.io    #仓库名称
+  owner: Leppard    #github用户名
+  admin: Leppard
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
 
 # Analytics settings
-# Baidu Analytics 
-# ba_track_id: [your track id]
+#Baidu Analytics 
+ba_track_id: 65adee96e81eb97b5b0eac810a30da58
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: 'UA-137511860-1'            # Format: UA-xxxxxx-xx
+ga_domain: rangooo.me
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
-sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "站在车站拿着机票等一艘船"
+sidebar-avatar: /img/sideBar-avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -106,34 +114,5 @@ friends: [
     #     title: "Su",
     #     href: "http://su.gallery/"
     # },{
-        title: "乱序",
-        href: "http://mida.re/"
-    },{
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
-    },{
-        title: "天镶的博客",
-        href: "http://lingyu.wang/"
-    },{
-        title: "Luke 的自留地",
-        href: "http://hmqk1995.github.io"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "David's Game",
-        href: "https://www.ruoyaowu.com/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
-    },{
-        title: "解旻的博客",
-        href: "http://xieminis.me/"
     }
 ]
