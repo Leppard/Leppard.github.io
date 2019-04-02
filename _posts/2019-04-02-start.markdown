@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "犹豫，就会败北"
-subtitle:   ""
+title:      "犹豫，就会败北。"
+subtitle:   "    -- 《只狼》"
 date:       2019-04-02 17:00:00
 author:     "Leppard"
 header-img: "img/post-bg-2015.jpg"
@@ -10,7 +10,6 @@ tags:
     - 生活
 ---
 
-> 犹豫，就会败北。 --《只狼》
 
  最近只狼大火，借用其中这句热血的话，激励自己开始积累博客，记录一些碎片学习和生活点滴。
 
