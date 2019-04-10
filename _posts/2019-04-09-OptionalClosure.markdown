@@ -13,10 +13,10 @@ tags:
 ---
 
 
-引子
+# 引子
 在Swift的函数书写中，作为一等公民的闭包常被用作函数参数进行传递。而往往在参数闭包前能看到一个这样的修饰符：`@escaping`：
 
-```
+``` swift
 // Code1-1
 // 来自官网的例子
 var completionArr: [() -> Void] = []
@@ -34,11 +34,14 @@ func doSomething(completion: @escaping () -> Void) {
 
 但是对于`@escaping`修饰的参数闭包情况会复杂一些。顾名思义，该参数闭包需要逃逸该函数，也就是生命周期需要超越过函数的作用域。就如Code1-1所示，在doSomething的函数作用域中，参数闭包completion被添加到了数组中，而在doSomething结束后，completion包括它所捕获的变量都依然需要存在，因为completion被completionArr持有了。在doSomething之外，我们依然需要执行comletion()，因此该completion的参数需要使用`@escaping`修饰，代表该闭包需要逃逸该函数作用域。由于该闭包生命周期变得复杂，故容易造成一些retain cycle的问题，需要显式在闭包中使用self，强制你仔细检查相互的持有关系。
 
-## 正题
+# 正题
 在Swift 3之后，默认参数闭包修饰符也从`@escaping`变为了`@nonescaping`，如果需要逃逸闭包需要自己手动声明为`@escaping`。关于`@escaping`和`@nonescaping`介绍到这里，来看看遇到的问题。
+
 ### 抛出问题
 今天见到了这样一个报错：
-```
+
+``` swift
+// Code2-1
 // !!! Compile Error: @escaping attribute only applies to function types
 public func download(url: String, completion: @escaping ((Bool)->Void)?) {
     // excute completion asynchronously when download.
@@ -81,7 +84,5 @@ public func download(url: String, completion: @escaping ((Bool)->Void)?) {
 * @nonescaping: 直接作为函数参数的闭包
 * @escaping: 其他所有闭包，包括被赋值给变量，存在于Array、Optional中
 
-## 尾声
+# 尾声
 由于开了博客一直不知道写些什么，因此把这次的小思考记录下来，作为”DailySwift”的开篇。从解决编译问题到尝试理解背后的设计原理，这其中的过程虽然有些费时，但却是一天最充满乐趣的时刻。
-
-
